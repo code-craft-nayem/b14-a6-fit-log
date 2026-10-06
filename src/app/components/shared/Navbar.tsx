@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex  items-center gap-4   py-4 justify-between px-4 md:flex-row md:py-6 ">
           <div className="flex items-center ">
             <Image src={logo} alt="" width={20} height={20} />
-            <h1 className=" font-medium md:text-lg md:font-extrabold pl-1 md:pl-0 text-[#FFFFFF]">
+            <h1 className=" font-medium md:text-lg md:font-extrabold pl-1 md:pl-2 text-[#FFFFFF]">
               FITLOG
             </h1>
           </div>

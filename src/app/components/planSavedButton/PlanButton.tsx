@@ -23,7 +23,8 @@ const PlanButton = ({ library }: { library: ILibrary }) => {
   };
   return (
     <button
-      className="xl:font-semibold font-semibold xl:text-sm text-sm text-[#0F1115] bg-[#C2F800] rounded-sm xl:px-6 px-6 xl:py-3 py-3  border-none  md:text-xs md:px-2 md:py-2 md:text-center"
+      disabled={Plan.length >= 5}
+      className="xl:font-semibold font-semibold xl:text-sm text-sm text-[#0F1115] bg-[#C2F800] rounded-sm xl:px-6 px-6 xl:py-3 py-3  border-none  md:text-xs md:px-2 md:py-2 md:text-center "
       onClick={() => handlePlan()}
     >
       Add to today&apos;s plan
