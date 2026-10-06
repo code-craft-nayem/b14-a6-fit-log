@@ -6,13 +6,16 @@ const Footer = () => {
     <section className="">
       <div className="bg-[#090A0D]">
         <div className="h-px w-full bg-[#1f2227]"></div>
-        <div className=" min-h-25  flex flex-col items-center justify-between  px-4 py-5 text-center sm:flex-row sm:justify-between sm:gap-0 sm:px-6 sm:py-0  sm:text-left h-full  ">
-          <div className="flex  gap-4">
-            <Image src={logo} alt="logo" width={18} height={18} />
-            <h2 className="font-bold text-sm text-[#FFFFFF]">FITLOG</h2>
+        <div className="   flex  items-center justify-between  px-4 py-5 md:px-10 md:py-10 text-center    ">
+          <div className="flex  md:gap-4 gap-1">
+            <Image src={logo} alt="logo" width={15} height={15} />
+            <h2 className=" font-medium text-xs md:text-lg md:font-extrabold pl-1 md:pl-0 text-[#FFFFFF]">
+              FITLOG
+            </h2>
           </div>
-          <p className="font-normal text-xs text-[#6B7280]">
-            © 2026 FitLog — Workout Library. Train hard, log honest.
+          <p className=" flex font-normal text-xs text-[#6B7280]">
+            © 2026 FitLog — Workout Library.
+            <span className="hidden md:block">Train hard, log honest.</span>
           </p>
         </div>
       </div>

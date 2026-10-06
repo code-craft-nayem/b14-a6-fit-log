@@ -58,7 +58,9 @@ const MyPlanPage = () => {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold">MY PLAN</h1>
+        <h1 className="md:text-3xl md:font-bold font-medium text-lg">
+          MY PLAN
+        </h1>
 
         <p className="mt-2 text-sm text-gray-500">
           Cap of five lifts for today. Finish them, then load more.
@@ -66,26 +68,30 @@ const MyPlanPage = () => {
       </div>
 
       <div className="grid grid-cols-1 overflow-hidden rounded-xl border  border-[#272b32] bg-[#15171D] md:grid-cols-3">
-        <div className="relative border-b border-[#272b32] p-6 md:border-b-0">
+        <div className="relative border-b border-[#272b32]  md:border-r p-2 md:p-6 md:border-b-0">
           <p className="text-sm text-gray-500">Exercises</p>
 
-          <h2 className="mt-2 text-3xl font-bold">{totalExercises}</h2>
-          <div className="absolute right-0 top-1/2 hidden h-14 w-px -translate-y-1/2 bg-[#272b32] md:block"></div>
+          <h2 className="mt-2 md:text-3xl md:font-bold font-semibold text-2xl">
+            {totalExercises}
+          </h2>
+          <div className="absolute right-0 top-1/2 hidden h-14 w-px  bg-[#272b32] md:block"></div>
         </div>
 
-        <div className="border-b border-[#272b32] md:border-b-0 p-6">
+        <div className="border-b border-[#272b32] md:border-r  p-2 md:p-6 ">
           <p className="text-sm text-gray-500">Minutes</p>
 
-          <h2 className="mt-2 text-3xl font-bold text-[#C2F800]">
+          <h2 className="mt-2 md:text-3xl md:font-bold font-semibold text-2xl">
             {totalDuration}
           </h2>
           <div className="absolute right-0 top-1/2 hidden h-14 w-px -translate-y-1/2 bg-[#272b32] md:block"></div>
         </div>
 
-        <div className="p-6">
+        <div className="p-2 md:p-6 ">
           <p className="text-sm text-gray-500">Calories</p>
 
-          <h2 className="mt-2 text-3xl font-bold">{totalCalories}</h2>
+          <h2 className="mt-2 md:text-3xl md:font-bold font-semibold text-2xl">
+            {totalCalories}
+          </h2>
         </div>
       </div>
 
@@ -213,7 +219,9 @@ const MyPlanPage = () => {
           </div>
         ) : (
           <div className="flex min-h-[350px] flex-col items-center justify-center rounded-xl border border-dashed border-[#1f2227] text-center">
-            <h1 className="text-2xl font-bold">NOTHING HERE YET</h1>
+            <h1 className="md:text-2xl md:font-bold text-xl font-medium">
+              NOTHING HERE YET
+            </h1>
 
             <p className="mt-2 max-w-md text-sm text-gray-500">
               Browse the library and add a lift to get today moving.

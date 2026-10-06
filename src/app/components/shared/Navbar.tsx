@@ -15,10 +15,8 @@ const Navbar = () => {
       <li>
         <Link href="/">Workouts</Link>
       </li>
-      <li>
-        <Link href="/my-plan">
-          <span className="md:hidden"> My Plan</span>
-        </Link>
+      <li className="hidden md:block">
+        <Link href="/my-plan">My Plan</Link>
       </li>
     </>
   );
@@ -27,24 +25,26 @@ const Navbar = () => {
     <nav>
       <div className="bg-[#0C0D10]">
         <div className="flex  items-center gap-4   py-4 justify-between px-4 md:flex-row md:py-6 ">
-          <div className="flex items-center gap-5">
-            <Image src={logo} alt="" width={30} height={30} />
-            <h1 className="text-lg font-extrabold text-[#FFFFFF]">FITLOG</h1>
+          <div className="flex items-center ">
+            <Image src={logo} alt="" width={20} height={20} />
+            <h1 className=" font-medium md:text-lg md:font-extrabold pl-1 md:pl-0 text-[#FFFFFF]">
+              FITLOG
+            </h1>
           </div>
 
           <div>
             <ul className="flex items-center gap-4">{links}</ul>
           </div>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-2 md:gap-5">
             <Link
               href="/my-plan?tab=plan"
-              className="flex items-center gap-4 text-gray-300"
+              className="flex items-center gap-1 md:gap-4 text-gray-300"
             >
               <span>Plan</span>
 
               <span
-                className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-medium ${
+                className={`flex h-6 w-6 md:h-10 md:w-10 items-center justify-center rounded-full text-sm font-normal ${
                   activeTab === "plan"
                     ? "bg-[#C2F800] text-black"
                     : "border border-gray-600 bg-[#0C0D10] text-gray-300"
@@ -55,12 +55,12 @@ const Navbar = () => {
             </Link>
             <Link
               href="/my-plan?tab=saved"
-              className="flex items-center gap-2 text-gray-300"
+              className="flex items-center gap-1 md:gap-4 text-gray-300"
             >
               <span>Saved</span>
 
               <span
-                className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-medium ${
+                className={`flex h-6 w-6 md:h-10 md:w-10 items-center justify-center rounded-full text-sm font-normal ${
                   activeTab === "saved"
                     ? "bg-[#C2F800] text-black"
                     : "border border-gray-600 bg-[#0C0D10] text-gray-300"
