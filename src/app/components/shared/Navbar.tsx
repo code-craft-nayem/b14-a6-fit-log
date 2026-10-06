@@ -3,20 +3,34 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
 import { useContext } from "react";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { LibraryContext } from "@/context/LibraryContext";
 
 const Navbar = () => {
   const { Plan, Save } = useContext(LibraryContext);
   const searchParams = useSearchParams();
+  const pathName = usePathname();
   const activeTab = searchParams.get("tab") || "plan";
+  const isWorkoutsActive = pathName === "/";
+  const isMyPlanActive = pathName === "/my-plan";
+
   const links = (
     <>
       <li>
-        <Link href="/">Workouts</Link>
+        <Link
+          href="/"
+          className={`rounded-full px-3 py-1 transition ${isWorkoutsActive ? "bg-[#1E3000] text-[#C2F800]" : "text-gray-400"}`}
+        >
+          Workouts
+        </Link>
       </li>
       <li className="hidden md:block">
-        <Link href="/my-plan">My Plan</Link>
+        <Link
+          href="/my-plan"
+          className={`rounded-full px-3 py-1 transition ${isMyPlanActive ? "bg-[#1E3000] text-[#C2F800]" : "text-gray-400"}`}
+        >
+          My Plan
+        </Link>
       </li>
     </>
   );
