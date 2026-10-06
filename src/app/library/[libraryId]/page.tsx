@@ -26,17 +26,17 @@ const detailPage = async ({ params }: DetailPageProps) => {
               src={library.image}
               alt={library.name}
               width={395}
-              height={1000}
+              height={100}
               className="rounded-lg object-fill "
             />
           </div>
 
           <div>
-            <h1 className="text-[25px] font-black uppercase leading-[1.05] tracking-[-0.5px]">
+            <h1 className="text-[25px] font-black uppercase ">
               {library.name}
             </h1>
 
-            <p className="mt-[10px] max-w-[395px] text-[10px] leading-[15px] text-[#8d929b]">
+            <p className="mt-[10px]  text-xs leading-[15px] text-[#8d929b]">
               {library.description}
             </p>
             <div className="mt-[13px] flex flex-wrap gap-[7px]">
@@ -54,7 +54,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
 
             <div className="mt-[19px] overflow-hidden rounded-[10px] border border-[#272b32] bg-[#171a20]">
               <div className="flex h-[38px] items-center justify-between border-b border-[#272b32] px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Equipment
                 </span>
 
@@ -64,7 +64,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
               </div>
 
               <div className="flex h-[38px] items-center justify-between border-b border-[#272b32] px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Difficulty
                 </span>
 
@@ -73,7 +73,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
                 </span>
               </div>
               <div className="flex h-[38px] items-center justify-between border-b border-[#272b32] px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Sets
                 </span>
 
@@ -81,7 +81,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
               </div>
 
               <div className="flex h-[38px] items-center justify-between border-b border-[#272b32] px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Reps
                 </span>
 
@@ -89,7 +89,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
               </div>
 
               <div className="flex h-[38px] items-center justify-between border-b border-[#272b32] px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Duration
                 </span>
 
@@ -98,7 +98,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
                 </span>
               </div>
               <div className="flex h-[38px] items-center justify-between border-b border-[#272b32] px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Calories
                 </span>
 
@@ -108,7 +108,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
               </div>
 
               <div className="flex h-[38px] items-center justify-between px-4">
-                <span className="text-[8px] uppercase tracking-wide text-[#8b9099]">
+                <span className="text-[10px] uppercase tracking-wide text-[#8b9099]">
                   Rating
                 </span>
 
@@ -134,7 +134,7 @@ const detailPage = async ({ params }: DetailPageProps) => {
                         {index + 1}.
                       </span>
 
-                      <span>{instruction}</span>
+                      <span className="text-xs">{instruction}</span>
                     </li>
                   ),
                 )}

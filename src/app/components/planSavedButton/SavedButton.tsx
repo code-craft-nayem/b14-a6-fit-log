@@ -18,7 +18,7 @@ const SavedButton = ({ library }: { library: ILibrary }) => {
   };
   return (
     <button
-      className="font-medium text-sm btn btn-outline text-[#E5E7EB] rounded-xl px-6 py-3"
+      className="font-medium text-sm btn btn-outline border-[#1f2227] text-[#E5E7EB] rounded-xl px-6 py-3"
       onClick={() => handleSaved()}
     >
       Save for later
