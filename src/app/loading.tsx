@@ -1,4 +1,4 @@
-import { RotatingLines } from "react-loader-spinner";
+import { Discuss, RotatingLines } from "react-loader-spinner";
 
 const loading = () => {
   return (
@@ -11,6 +11,16 @@ const loading = () => {
         ariaLabel="loading"
         animationDuration={0.75}
       />
+
+      {/* <Discuss
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="discuss-loading"
+        wrapperStyle={{}}
+        wrapperClass="discuss-wrapper"
+        color="#fff"
+      /> */}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 import LibraryProvider from "@/context/LibraryContext";
 import { ToastContainer } from "react-toastify";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +29,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-theme="dark"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="flex flex-col bg-[#0C0D10]">
+      <body className="bg-[#0C0D10]">
         <LibraryProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <div className="   flex min-h-screen flex-col">
+            <Suspense fallback={null}>
+              <Navbar />
+            </Suspense>
+            <main className="flex-1  ">{children}</main>
+            <Footer />
 
-          <ToastContainer />
+            <ToastContainer />
+          </div>
         </LibraryProvider>
       </body>
     </html>

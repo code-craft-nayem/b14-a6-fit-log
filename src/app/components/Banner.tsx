@@ -25,7 +25,12 @@ const Banner = () => {
         </div>
 
         <div className="hidden md:inline">
-          <Image src={logo} alt="" />
+          <Image
+            src={logo}
+            alt="banner img "
+            sizes="max-768px"
+            className="md:max-w-60 xl:max-w-96"
+          />
         </div>
       </div>
     </section>
